@@ -1,7 +1,7 @@
+name: Publish releases to crates.io
+
 on:
   workflow_dispatch:
-
-name: Publish releases to crates.io
 
 jobs:
   publish:
@@ -21,4 +21,3 @@ jobs:
       - run: cargo publish --token ${CRATES_IO_TOKEN}
         env:
           CRATES_IO_TOKEN: ${{ secrets.CRATES_IO_TOKEN }}
-          
